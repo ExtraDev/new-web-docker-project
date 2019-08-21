@@ -13,3 +13,11 @@ sudo docker-compose down
 Apache on port 1026
 
 PhpMyAdmin on port 5002
+
+Login for PhpMyAdmin
+- admin
+- admin
+
+Login for root PhpMyAdmin
+- root
+- root

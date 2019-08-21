@@ -1,26 +1,26 @@
 version: '3'
 services:
-  db-player:
+  db:
     image: mysql:5.7
     volumes:
       - ./data/db:/var/lib/mysql:rw
     environment:
       - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=player
+      - MYSQL_DATABASE=mydb
       - MYSQL_USER=admin
       - MYSQL_PASSWORD=admin
-  phpmyadmin-player:
+  phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
     ports:
       - 5002:80
     links:
-      - db-player
+      - db
     environment:
-      - PMA_HOST=db-player
+      - PMA_HOST=db
       - MYSQL_USER=admin
       - MYSQL_PASSWORD=admin
       - MYSQL_ROOT_PASSWORD=root
-  php-player:
+  php:
     build: config
     ports:
       - 1026:80
