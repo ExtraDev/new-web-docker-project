@@ -1,4 +1,4 @@
-# Start projet with main docker structur
+# Start projet with main docker structure
 List of containers:
 - mysql-5.7
 - PhpMyAdmin
